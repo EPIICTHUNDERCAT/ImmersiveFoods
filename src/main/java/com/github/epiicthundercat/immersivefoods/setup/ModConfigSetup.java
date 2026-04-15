@@ -6,20 +6,13 @@ import net.minecraftforge.fml.config.ModConfig;
 
 public class ModConfigSetup {
 
-    public static void register() {
-        registerServerConfigs();
-
+    public static void register(ModLoadingContext context) {
+        registerServerConfigs(context);
     }
 
-
-
-
-    private static void registerServerConfigs() {
-
+    private static void registerServerConfigs(ModLoadingContext context) {
         ForgeConfigSpec.Builder SERVER_BUILDER = new ForgeConfigSpec.Builder();
         IFConfig.registerServerConfig(SERVER_BUILDER);
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, SERVER_BUILDER.build());
-
+        context.registerConfig(ModConfig.Type.SERVER, SERVER_BUILDER.build());
     }
 }

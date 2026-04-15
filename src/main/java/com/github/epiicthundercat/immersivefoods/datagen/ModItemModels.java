@@ -123,14 +123,14 @@ public class ModItemModels extends ItemModelProvider {
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Reference.MODID,"item/" + item.getId().getPath()));
+                ResourceLocation.parse("minecraft:item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Reference.MODID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(Reference.MODID,"item/" + item.getId().getPath()));
+                ResourceLocation.parse("minecraft:item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Reference.MODID, "item/" + item.getId().getPath()));
     }
 
 }

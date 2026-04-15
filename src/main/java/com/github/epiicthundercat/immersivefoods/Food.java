@@ -18,23 +18,20 @@ public class Food {
 
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public Food() {
+    public Food(FMLJavaModLoadingContext context) {
 
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = context.getModEventBus();
 
         IFCreativeTabs.register(modEventBus);
 
         Registration.register(modEventBus);
         ModSetup.setup();
 
-
         IFLootModifiers.register(modEventBus);
 
-        ModConfigSetup.register();
-
+        ModConfigSetup.register(context);
 
         modEventBus.addListener(ModSetup::init);
-
 
     }
 
