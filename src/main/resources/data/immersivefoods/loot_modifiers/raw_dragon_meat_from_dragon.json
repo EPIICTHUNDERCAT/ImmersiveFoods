@@ -1,10 +1,11 @@
 {
-  "type": "immersivefoods:boss_add",
+  "type": "immersivefoods:cooked_boss_add",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "minecraft:entities/ender_dragon"
     }
   ],
-  "addition": "immersivefoods:raw_dragon_meat"
+  "raw": "immersivefoods:raw_dragon_meat",
+  "cooked": "immersivefoods:cooked_dragon_meat"
 }

@@ -1,0 +1,11 @@
+{
+  "type": "immersivefoods:cooked_add",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/armadillo"
+    }
+  ],
+  "raw": "immersivefoods:raw_armadillo_meat",
+  "cooked": "immersivefoods:cooked_armadillo_meat"
+}

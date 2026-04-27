@@ -1,10 +1,11 @@
 {
-  "type": "immersivefoods:generic_add",
+  "type": "immersivefoods:cooked_add",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "minecraft:entities/parrot"
     }
   ],
-  "addition": "immersivefoods:raw_parrot_meat"
+  "raw": "immersivefoods:raw_parrot_meat",
+  "cooked": "immersivefoods:cooked_parrot_meat"
 }

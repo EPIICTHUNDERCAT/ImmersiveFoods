@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "immersivefoods",
+  "ingredient": {
+    "item": "immersivefoods:raw_cat_meat"
+  },
+  "result": {
+    "id": "immersivefoods:cooked_cat_meat"
+  }
+}

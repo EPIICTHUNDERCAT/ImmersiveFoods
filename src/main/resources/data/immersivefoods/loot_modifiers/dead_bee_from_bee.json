@@ -1,10 +1,11 @@
 {
-  "type": "immersivefoods:chance_add",
+  "type": "immersivefoods:cooked_chance_add",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "minecraft:entities/bee"
     }
   ],
-  "addition": "immersivefoods:dead_bee"
+  "raw": "immersivefoods:dead_bee",
+  "cooked": "immersivefoods:toasted_bee"
 }

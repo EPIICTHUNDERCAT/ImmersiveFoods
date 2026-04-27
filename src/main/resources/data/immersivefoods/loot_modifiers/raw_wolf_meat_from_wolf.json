@@ -1,10 +1,11 @@
 {
-  "type": "immersivefoods:generic_add",
+  "type": "immersivefoods:cooked_add",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "minecraft:entities/wolf"
     }
   ],
-  "addition": "immersivefoods:raw_wolf_meat"
+  "raw": "immersivefoods:raw_wolf_meat",
+  "cooked": "immersivefoods:cooked_wolf_meat"
 }

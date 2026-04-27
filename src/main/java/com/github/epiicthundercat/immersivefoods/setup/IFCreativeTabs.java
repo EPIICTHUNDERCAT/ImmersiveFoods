@@ -112,6 +112,11 @@ public class IFCreativeTabs {
                 pOutput.accept(Registration.COOKED_CAMEL_MEAT.get());
                 pOutput.accept(Registration.RAW_CAMEL_MEAT.get());
 
+                // 1.21.1
+                //Armadillo
+                pOutput.accept(Registration.COOKED_ARMADILLO_MEAT.get());
+                pOutput.accept(Registration.RAW_ARMADILLO_MEAT.get());
+
             }).build()
 
     );

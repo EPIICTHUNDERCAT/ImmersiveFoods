@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "immersivefoods",
+  "ingredient": {
+    "item": "immersivefoods:raw_frog_leg"
+  },
+  "result": {
+    "id": "immersivefoods:cooked_frog_leg"
+  }
+}

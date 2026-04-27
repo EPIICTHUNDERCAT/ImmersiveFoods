@@ -2,15 +2,18 @@ package com.github.epiicthundercat.immersivefoods.datagen;
 
 import com.github.epiicthundercat.immersivefoods.setup.Registration;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import java.util.concurrent.CompletableFuture;
+
 public class ModRecipeProvider extends RecipeProvider {
 
-    public ModRecipeProvider(PackOutput packOutput) {
-        super(packOutput);
+    public ModRecipeProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(packOutput, lookupProvider);
     }
 
 
@@ -63,6 +66,26 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("immersivefoods")
                 .unlockedBy("has_raw_horse", has(Registration.RAW_HORSE_MEAT.get()))
                 .save(recipeOutput, "horse_meat_smoke");
+
+        // 1.21.1
+        //Armadillo
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Registration.RAW_ARMADILLO_MEAT.get()), RecipeCategory.FOOD, Registration.COOKED_ARMADILLO_MEAT.get(), 1.0f, 200)
+                .group("immersivefoods")
+                .unlockedBy("has_raw_armadillo", has(Registration.RAW_ARMADILLO_MEAT.get()))
+                .save(recipeOutput, "armadillo_meat_smelt");
+
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(Registration.RAW_ARMADILLO_MEAT.get()), RecipeCategory.FOOD, Registration.COOKED_ARMADILLO_MEAT.get(), 1.0f, 600)
+                .group("immersivefoods")
+                .unlockedBy("has_raw_armadillo", has(Registration.RAW_ARMADILLO_MEAT.get()))
+                .save(recipeOutput, "armadillo_meat_campfire");
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(Registration.RAW_ARMADILLO_MEAT.get()), RecipeCategory.FOOD, Registration.COOKED_ARMADILLO_MEAT.get(), 1.0f, 100)
+                .group("immersivefoods")
+                .unlockedBy("has_raw_armadillo", has(Registration.RAW_ARMADILLO_MEAT.get()))
+                .save(recipeOutput, "armadillo_meat_smoke");
+
+
+
 
         //Llama
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Registration.RAW_LLAMA_MEAT.get()), RecipeCategory.FOOD, Registration.COOKED_LLAMA_MEAT.get(), 1.0f, 200)

@@ -1,9 +1,9 @@
 package com.github.epiicthundercat.immersivefoods.setup;
 
 import com.github.epiicthundercat.immersivefoods.Reference;
+import com.github.epiicthundercat.immersivefoods.common.BowlFoodItem;
 import com.github.epiicthundercat.immersivefoods.common.FoodValues;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,7 +28,7 @@ public class Registration {
     public static final RegistryObject<Item> RAW_HORSE_MEAT = ITEMS.register("raw_horse_meat", () -> new Item(food(FoodValues.RAW_HORSE_FOOD)));
     public static final RegistryObject<Item> COOKED_HORSE_MEAT = ITEMS.register("cooked_horse_meat", () -> new Item(food(FoodValues.COOKED_HORSE_FOOD)));
 
-    //Soups
+    //Soups — BowlFoodItem was removed in MC 1.21.1; using local replacement class
     public static final RegistryObject<Item> CARROT_SOUP = ITEMS.register("carrot_soup", () -> new BowlFoodItem(soupFood(FoodValues.CARROT_SOUP_FOOD)));
     public static final RegistryObject<Item> POTATO_SOUP = ITEMS.register("potato_soup", () -> new BowlFoodItem(soupFood(FoodValues.POTATO_SOUP_FOOD)));
 
@@ -67,13 +67,14 @@ public class Registration {
     public static final RegistryObject<Item> RAW_PARROT_MEAT = ITEMS.register("raw_parrot_meat", () -> new Item(food(FoodValues.RAW_PARROT_FOOD)));
     public static final RegistryObject<Item> COOKED_PARROT_MEAT = ITEMS.register("cooked_parrot_meat", () -> new Item(food(FoodValues.COOKED_PARROT_FOOD)));
 
+
     //Dragon
     public static final RegistryObject<Item> RAW_DRAGON_MEAT = ITEMS.register("raw_dragon_meat", () -> new Item(food(FoodValues.RAW_DRAGON_FOOD)));
     public static final RegistryObject<Item> COOKED_DRAGON_MEAT = ITEMS.register("cooked_dragon_meat", () -> new Item(food(FoodValues.COOKED_DRAGON_FOOD)));
 
     //Polar Bear
-    public static final RegistryObject<Item> RAW_POLAR_BEAR_MEAT = ITEMS.register("raw_polar_bear_meat", () -> new Item(food(FoodValues.RAW_PARROT_FOOD)));
-    public static final RegistryObject<Item> COOKED_POLAR_BEAR_MEAT = ITEMS.register("cooked_polar_bear_meat", () -> new Item(food(FoodValues.COOKED_PARROT_FOOD)));
+    public static final RegistryObject<Item> RAW_POLAR_BEAR_MEAT = ITEMS.register("raw_polar_bear_meat", () -> new Item(food(FoodValues.RAW_BEAR_MEAT)));
+    public static final RegistryObject<Item> COOKED_POLAR_BEAR_MEAT = ITEMS.register("cooked_polar_bear_meat", () -> new Item(food(FoodValues.COOKED_BEAR_MEAT)));
 
     //Axolotl
     public static final RegistryObject<Item> RAW_AXOLOTL_MEAT = ITEMS.register("raw_axolotl_meat", () -> new Item(food(FoodValues.RAW_PARROT_FOOD)));
@@ -92,24 +93,24 @@ public class Registration {
     public static final RegistryObject<Item> TOASTED_BEE = ITEMS.register("toasted_bee", () -> new Item(food(FoodValues.COOKED_BAT_FOOD)));
 
     //Cat
-    public static final RegistryObject<Item> RAW_CAT_MEAT = ITEMS.register("raw_cat_meat", () -> new Item(food(FoodValues.RAW_PARROT_FOOD)));
-    public static final RegistryObject<Item> COOKED_CAT_MEAT = ITEMS.register("cooked_cat_meat", () -> new Item(food(FoodValues.COOKED_PARROT_FOOD)));
+    public static final RegistryObject<Item> RAW_CAT_MEAT = ITEMS.register("raw_cat_meat", () -> new Item(food(FoodValues.RAW_OCELOT_FOOD)));
+    public static final RegistryObject<Item> COOKED_CAT_MEAT = ITEMS.register("cooked_cat_meat", () -> new Item(food(FoodValues.COOKED_OCELOT_FOOD)));
 
     //Panda
-    public static final RegistryObject<Item> RAW_PANDA_MEAT = ITEMS.register("raw_panda_meat", () -> new Item(food(FoodValues.RAW_HORSE_FOOD)));
-    public static final RegistryObject<Item> COOKED_PANDA_MEAT = ITEMS.register("cooked_panda_meat", () -> new Item(food(FoodValues.COOKED_HORSE_FOOD)));
+    public static final RegistryObject<Item> RAW_PANDA_MEAT = ITEMS.register("raw_panda_meat", () -> new Item(food(FoodValues.RAW_BEAR_MEAT)));
+    public static final RegistryObject<Item> COOKED_PANDA_MEAT = ITEMS.register("cooked_panda_meat", () -> new Item(food(FoodValues.COOKED_BEAR_MEAT)));
 
     //Turtle
-    public static final RegistryObject<Item> RAW_TURTLE_MEAT = ITEMS.register("raw_turtle_meat", () -> new Item(food(FoodValues.RAW_PARROT_FOOD)));
-    public static final RegistryObject<Item> COOKED_TURTLE_MEAT = ITEMS.register("cooked_turtle_meat", () -> new Item(food(FoodValues.COOKED_PARROT_FOOD)));
+    public static final RegistryObject<Item> RAW_TURTLE_MEAT = ITEMS.register("raw_turtle_meat", () -> new Item(food(FoodValues.RAW_SQUID_FOOD)));
+    public static final RegistryObject<Item> COOKED_TURTLE_MEAT = ITEMS.register("cooked_turtle_meat", () -> new Item(food(FoodValues.COOKED_SQUID_FOOD)));
 
     //Dolphin
     public static final RegistryObject<Item> RAW_DOLPHIN_MEAT = ITEMS.register("raw_dolphin_meat", () -> new Item(food(FoodValues.RAW_SQUID_FOOD)));
     public static final RegistryObject<Item> COOKED_DOLPHIN_MEAT = ITEMS.register("cooked_dolphin_meat", () -> new Item(food(FoodValues.COOKED_SQUID_FOOD)));
 
     //Frog
-    public static final RegistryObject<Item> RAW_FROG_LEGS = ITEMS.register("raw_frog_leg", () -> new Item(food(FoodValues.RAW_SQUID_FOOD)));
-    public static final RegistryObject<Item> COOKED_FROG_LEGS = ITEMS.register("cooked_frog_leg", () -> new Item(food(FoodValues.COOKED_SQUID_FOOD)));
+    public static final RegistryObject<Item> RAW_FROG_LEGS = ITEMS.register("raw_frog_leg", () -> new Item(food(FoodValues.RAW_BAT_FOOD)));
+    public static final RegistryObject<Item> COOKED_FROG_LEGS = ITEMS.register("cooked_frog_leg", () -> new Item(food(FoodValues.COOKED_BAT_FOOD)));
 
     //Camel
     public static final RegistryObject<Item> RAW_CAMEL_MEAT = ITEMS.register("raw_camel_meat", () -> new Item(food(FoodValues.RAW_HORSE_FOOD)));
@@ -118,6 +119,14 @@ public class Registration {
     //Sniffer
     public static final RegistryObject<Item> RAW_SNIFFER_MEAT = ITEMS.register("raw_sniffer_meat", () -> new Item(food(FoodValues.RAW_HORSE_FOOD)));
     public static final RegistryObject<Item> COOKED_SNIFFER_MEAT = ITEMS.register("cooked_sniffer_meat", () -> new Item(food(FoodValues.COOKED_HORSE_FOOD)));
+
+    // 1.21.1
+    //Armadillo
+    public static final RegistryObject<Item> RAW_ARMADILLO_MEAT = ITEMS.register("raw_armadillo_meat", () -> new Item(food(FoodValues.RAW_PARROT_FOOD)));
+    public static final RegistryObject<Item> COOKED_ARMADILLO_MEAT = ITEMS.register("cooked_armadillo_meat", () -> new Item(food(FoodValues.COOKED_PARROT_FOOD)));
+
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_llama": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersivefoods:raw_llama_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:llama_meat_smelt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_llama"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:llama_meat_smelt"
+    ]
+  }
+}

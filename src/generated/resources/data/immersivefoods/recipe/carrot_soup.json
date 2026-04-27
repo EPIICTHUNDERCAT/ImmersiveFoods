@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "immersivefoods",
+  "key": {
+    "b": {
+      "item": "minecraft:bowl"
+    },
+    "x": {
+      "item": "minecraft:carrot"
+    }
+  },
+  "pattern": [
+    "xxx",
+    "xxx",
+    " b "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersivefoods:carrot_soup"
+  }
+}

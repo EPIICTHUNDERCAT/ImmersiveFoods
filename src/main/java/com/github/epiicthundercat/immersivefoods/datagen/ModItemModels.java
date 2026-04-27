@@ -119,6 +119,11 @@ public class ModItemModels extends ItemModelProvider {
         simpleItem(Registration.RAW_CAMEL_MEAT);
         simpleItem(Registration.COOKED_CAMEL_MEAT);
 
+        // 1.21.1
+        // Armadillo
+        simpleItem(Registration.RAW_ARMADILLO_MEAT);
+        simpleItem(Registration.COOKED_ARMADILLO_MEAT);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

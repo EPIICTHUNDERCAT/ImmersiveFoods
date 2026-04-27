@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "immersivefoods",
+  "key": {
+    "b": {
+      "item": "minecraft:bowl"
+    },
+    "x": {
+      "item": "minecraft:potato"
+    }
+  },
+  "pattern": [
+    "xxx",
+    "xxx",
+    " b "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersivefoods:potato_soup"
+  }
+}

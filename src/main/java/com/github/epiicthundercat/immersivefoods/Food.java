@@ -5,9 +5,8 @@ import com.github.epiicthundercat.immersivefoods.setup.IFCreativeTabs;
 import com.github.epiicthundercat.immersivefoods.setup.ModConfigSetup;
 import com.github.epiicthundercat.immersivefoods.setup.ModSetup;
 import com.github.epiicthundercat.immersivefoods.setup.Registration;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -21,6 +20,7 @@ public class Food {
     public Food(FMLJavaModLoadingContext context) {
 
         IEventBus modEventBus = context.getModEventBus();
+        ModContainer container = context.getContainer();
 
         IFCreativeTabs.register(modEventBus);
 
@@ -29,14 +29,9 @@ public class Food {
 
         IFLootModifiers.register(modEventBus);
 
-        ModConfigSetup.register(context);
+        ModConfigSetup.register(container);
 
         modEventBus.addListener(ModSetup::init);
-
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
 
     }
 

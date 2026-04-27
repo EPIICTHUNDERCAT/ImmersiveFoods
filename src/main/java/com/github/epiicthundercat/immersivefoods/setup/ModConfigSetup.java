@@ -1,18 +1,15 @@
 package com.github.epiicthundercat.immersivefoods.setup;
 
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.config.ModConfig;
 
 public class ModConfigSetup {
 
-    public static void register(ModLoadingContext context) {
-        registerServerConfigs(context);
-    }
-
-    private static void registerServerConfigs(ModLoadingContext context) {
+    // ModLoadingContext.registerConfig() deprecated/removed in Forge 52; use ModContainer.addConfig()
+    public static void register(ModContainer container) {
         ForgeConfigSpec.Builder SERVER_BUILDER = new ForgeConfigSpec.Builder();
         IFConfig.registerServerConfig(SERVER_BUILDER);
-        context.registerConfig(ModConfig.Type.SERVER, SERVER_BUILDER.build());
+        container.addConfig(new ModConfig(ModConfig.Type.SERVER, SERVER_BUILDER.build(), container));
     }
 }

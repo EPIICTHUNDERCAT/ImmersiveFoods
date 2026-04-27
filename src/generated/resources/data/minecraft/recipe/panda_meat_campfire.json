@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 1.0,
+  "group": "immersivefoods",
+  "ingredient": {
+    "item": "immersivefoods:raw_panda_meat"
+  },
+  "result": {
+    "id": "immersivefoods:cooked_panda_meat"
+  }
+}

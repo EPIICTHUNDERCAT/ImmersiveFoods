@@ -23,3 +23,10 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
+build-DESKTOP-NH7K2N9.gradle
+gradle-DESKTOP-NH7K2N9.properties
+gradlew-DESKTOP-NH7K2N9
+gradlew-DESKTOP-NH7K2N9.bat
+hs_err_pid31588.log
+src/generated/resources/.cache/*
+run-data/*

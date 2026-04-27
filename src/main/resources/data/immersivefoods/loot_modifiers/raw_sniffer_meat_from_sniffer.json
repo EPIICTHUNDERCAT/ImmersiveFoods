@@ -1,10 +1,11 @@
 {
-  "type": "immersivefoods:generic_add",
+  "type": "immersivefoods:cooked_add",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "minecraft:entities/sniffer"
     }
   ],
-  "addition": "immersivefoods:raw_sniffer_meat"
+  "raw": "immersivefoods:raw_sniffer_meat",
+  "cooked": "immersivefoods:cooked_sniffer_meat"
 }

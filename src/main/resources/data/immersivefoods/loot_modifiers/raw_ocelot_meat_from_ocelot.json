@@ -1,10 +1,11 @@
 {
-  "type": "immersivefoods:generic_add",
+  "type": "immersivefoods:cooked_add",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "minecraft:entities/ocelot"
     }
   ],
-  "addition": "immersivefoods:raw_ocelot_meat"
+  "raw": "immersivefoods:raw_ocelot_meat",
+  "cooked": "immersivefoods:cooked_ocelot_meat"
 }
