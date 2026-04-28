@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_frog_leg"
+            "items": [
+              "immersivefoods:raw_frog_leg"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:frog_leg_smelt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

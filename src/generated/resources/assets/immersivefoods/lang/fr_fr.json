@@ -50,5 +50,7 @@
   "item.immersivefoods.raw_squid_meat": "Calmar cru",
   "item.immersivefoods.raw_turtle_meat": "Tortue crue",
   "item.immersivefoods.raw_wolf_meat": "Loup cru",
-  "item.immersivefoods.toasted_bee": "Abeille grillée"
+  "item.immersivefoods.toasted_bee": "Abeille grillée",
+  "item.immersivefoods.raw_nautilus": "Nautile Cru",
+  "item.immersivefoods.cooked_nautilus": "Nautile Cuit"
 }

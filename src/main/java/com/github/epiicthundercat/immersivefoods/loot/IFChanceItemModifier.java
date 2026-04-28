@@ -7,6 +7,8 @@ import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.common.loot.LootModifier;
@@ -27,9 +29,10 @@ public class IFChanceItemModifier extends LootModifier {
     }
 
     @Override
-    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        if (context.getRandom().nextDouble() / (double) Math.min(context.getLootingModifier() + 1, 2) < IFConfig.CHANCE_MOB_DROP.get())
-            generatedLoot.add(new ItemStack(item, context.getRandom().nextInt(Math.min(context.getLootingModifier() + 1, 2)) + IFConfig.CHANCE_MOB_FOOD_DROP.get()));
+    protected @NotNull ObjectArrayList<ItemStack> doApply(LootTable lootTable, ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
+        int looting = context.hasParameter(LootContextParams.ENCHANTMENT_LEVEL) ? context.getParameter(LootContextParams.ENCHANTMENT_LEVEL) : 0;
+        if (context.getRandom().nextDouble() / (double) Math.min(looting + 1, 2) < IFConfig.CHANCE_MOB_DROP.get())
+            generatedLoot.add(new ItemStack(item, context.getRandom().nextInt(Math.min(looting + 1, 2)) + IFConfig.CHANCE_MOB_FOOD_DROP.get()));
         return generatedLoot;
     }
 

@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_sniffer_meat"
+            "items": [
+              "immersivefoods:raw_sniffer_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:sniffer_smelt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_horse_meat"
+            "items": [
+              "immersivefoods:raw_horse_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:horse_meat_campfire"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

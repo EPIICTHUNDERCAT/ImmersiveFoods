@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_donkey_meat"
+            "items": [
+              "immersivefoods:raw_donkey_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:donkey_meat_campfire"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

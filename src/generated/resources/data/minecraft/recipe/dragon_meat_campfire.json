@@ -4,10 +4,6 @@
   "cookingtime": 800,
   "experience": 25.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_dragon_meat"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_dragon_meat"
-  }
+  "ingredient": "immersivefoods:raw_dragon_meat",
+  "result": "immersivefoods:cooked_dragon_meat"
 }

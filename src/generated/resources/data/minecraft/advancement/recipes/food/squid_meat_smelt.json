@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:filleted_squid_meat"
+            "items": [
+              "immersivefoods:filleted_squid_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:squid_meat_smelt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

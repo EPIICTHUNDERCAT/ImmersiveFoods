@@ -30,7 +30,7 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/immersive-foods"
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="immersivefoods.png" #optional
 # A text field displayed in the mod UI
-credits="An Old Port, from HedgeHogPie, Completely rewrote the mod now." #optional
+credits="EPIC_THUNDERCAT and HedgeHogPie(Original Creator)" #optional
 # A text field displayed in the mod UI
 authors="${mod_authors}" #optional
 # Display Test controls the display for your mod in the server connection screen

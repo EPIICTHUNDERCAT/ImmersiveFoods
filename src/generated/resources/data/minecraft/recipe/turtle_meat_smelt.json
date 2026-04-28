@@ -4,10 +4,6 @@
   "cookingtime": 200,
   "experience": 1.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_turtle_meat"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_turtle_meat"
-  }
+  "ingredient": "immersivefoods:raw_turtle_meat",
+  "result": "immersivefoods:cooked_turtle_meat"
 }

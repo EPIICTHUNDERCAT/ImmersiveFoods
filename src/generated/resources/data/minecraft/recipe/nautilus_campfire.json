@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 1.0,
+  "group": "immersivefoods",
+  "ingredient": "immersivefoods:raw_nautilus",
+  "result": "immersivefoods:cooked_nautilus"
+}

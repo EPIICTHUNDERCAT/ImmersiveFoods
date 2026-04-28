@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_ocelot_meat"
+            "items": [
+              "immersivefoods:raw_ocelot_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:ocelot_meat_campfire"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -3,20 +3,14 @@
   "category": "misc",
   "group": "immersivefoods",
   "key": {
-    "b": {
-      "item": "minecraft:bowl"
-    },
-    "x": {
-      "item": "minecraft:potato"
-    }
+    "b": "minecraft:bowl",
+    "x": "minecraft:potato"
   },
   "pattern": [
     "xxx",
     "xxx",
     " b "
   ],
-  "result": {
-    "count": 1,
-    "id": "immersivefoods:potato_soup"
-  }
+  "result": "immersivefoods:potato_soup",
+  "show_notification": true
 }

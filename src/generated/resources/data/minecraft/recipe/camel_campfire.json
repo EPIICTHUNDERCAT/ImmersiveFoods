@@ -4,10 +4,6 @@
   "cookingtime": 600,
   "experience": 1.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_camel_meat"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_camel_meat"
-  }
+  "ingredient": "immersivefoods:raw_camel_meat",
+  "result": "immersivefoods:cooked_camel_meat"
 }

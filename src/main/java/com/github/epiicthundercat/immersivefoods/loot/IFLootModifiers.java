@@ -3,7 +3,7 @@ package com.github.epiicthundercat.immersivefoods.loot;
 import com.github.epiicthundercat.immersivefoods.Reference;
 import com.mojang.serialization.MapCodec;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -32,7 +32,7 @@ public class IFLootModifiers {
             LOOT_MODIFIER_SERIALIZERS.register("cooked_chance_add", IFCookedChanceItemModifier.CODEC);
 
 
-    public static void register(IEventBus bus) {
+    public static void register(BusGroup bus) {
         LOOT_MODIFIER_SERIALIZERS.register(bus);
     }
 }

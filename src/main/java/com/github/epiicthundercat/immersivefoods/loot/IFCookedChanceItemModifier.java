@@ -8,6 +8,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
@@ -34,11 +35,12 @@ public class IFCookedChanceItemModifier extends LootModifier {
     }
 
     @Override
-    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        if (context.getRandom().nextDouble() / (double) Math.min(context.getLootingModifier() + 1, 2) < IFConfig.CHANCE_MOB_DROP.get()) {
-            Entity entity = context.getParamOrNull(LootContextParams.THIS_ENTITY);
+    protected @NotNull ObjectArrayList<ItemStack> doApply(LootTable lootTable, ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
+        int looting = context.hasParameter(LootContextParams.ENCHANTMENT_LEVEL) ? context.getParameter(LootContextParams.ENCHANTMENT_LEVEL) : 0;
+        if (context.getRandom().nextDouble() / (double) Math.min(looting + 1, 2) < IFConfig.CHANCE_MOB_DROP.get()) {
+            Entity entity = context.getOptionalParameter(LootContextParams.THIS_ENTITY);
             Item drop = (entity != null && entity.isOnFire()) ? cookedItem : rawItem;
-            generatedLoot.add(new ItemStack(drop, context.getRandom().nextInt(Math.min(context.getLootingModifier() + 1, 2)) + IFConfig.CHANCE_MOB_FOOD_DROP.get()));
+            generatedLoot.add(new ItemStack(drop, context.getRandom().nextInt(Math.min(looting + 1, 2)) + IFConfig.CHANCE_MOB_FOOD_DROP.get()));
         }
         return generatedLoot;
     }

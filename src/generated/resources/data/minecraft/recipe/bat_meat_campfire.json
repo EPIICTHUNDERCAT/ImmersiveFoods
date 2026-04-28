@@ -4,10 +4,6 @@
   "cookingtime": 600,
   "experience": 1.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_bat_meat"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_bat_meat"
-  }
+  "ingredient": "immersivefoods:raw_bat_meat",
+  "result": "immersivefoods:cooked_bat_meat"
 }

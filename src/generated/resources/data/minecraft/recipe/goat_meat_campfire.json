@@ -4,10 +4,6 @@
   "cookingtime": 600,
   "experience": 1.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_goat_meat"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_goat_meat"
-  }
+  "ingredient": "immersivefoods:raw_goat_meat",
+  "result": "immersivefoods:cooked_goat_meat"
 }

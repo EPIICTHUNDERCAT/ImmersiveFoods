@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_camel_meat"
+            "items": [
+              "immersivefoods:raw_camel_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:camel_smelt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

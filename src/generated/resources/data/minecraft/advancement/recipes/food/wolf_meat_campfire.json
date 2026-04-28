@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_wolf_meat"
+            "items": [
+              "immersivefoods:raw_wolf_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:wolf_meat_campfire"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

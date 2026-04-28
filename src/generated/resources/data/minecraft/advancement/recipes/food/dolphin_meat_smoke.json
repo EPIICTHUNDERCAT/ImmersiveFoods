@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_dolphin_meat"
+            "items": [
+              "immersivefoods:raw_dolphin_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:dolphin_meat_smoke"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

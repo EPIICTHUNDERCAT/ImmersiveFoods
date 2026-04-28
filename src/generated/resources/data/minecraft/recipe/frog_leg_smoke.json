@@ -4,10 +4,6 @@
   "cookingtime": 100,
   "experience": 1.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_frog_leg"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_frog_leg"
-  }
+  "ingredient": "immersivefoods:raw_frog_leg",
+  "result": "immersivefoods:cooked_frog_leg"
 }

@@ -4,10 +4,6 @@
   "cookingtime": 100,
   "experience": 1.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_fox_meat"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_fox_meat"
-  }
+  "ingredient": "immersivefoods:raw_fox_meat",
+  "result": "immersivefoods:cooked_fox_meat"
 }

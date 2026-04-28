@@ -4,10 +4,6 @@
   "cookingtime": 600,
   "experience": 1.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_dolphin_meat"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_dolphin_meat"
-  }
+  "ingredient": "immersivefoods:raw_dolphin_meat",
+  "result": "immersivefoods:cooked_dolphin_meat"
 }

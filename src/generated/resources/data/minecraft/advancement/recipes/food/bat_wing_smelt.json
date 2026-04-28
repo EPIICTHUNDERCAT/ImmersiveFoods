@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:bat_wing"
+            "items": [
+              "immersivefoods:bat_wing"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:bat_wing_smelt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

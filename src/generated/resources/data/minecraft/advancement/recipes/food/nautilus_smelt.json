@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_armadillo": {
+    "has_raw_nautilus": {
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_armadillo_meat"
+            "items": [
+              "immersivefoods:raw_nautilus"
+            ]
           }
         ]
       },
@@ -13,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:armadillo_meat_smoke"
+        "recipe": "minecraft:nautilus_smelt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +23,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_raw_armadillo"
+      "has_raw_nautilus"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:armadillo_meat_smoke"
+      "minecraft:nautilus_smelt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

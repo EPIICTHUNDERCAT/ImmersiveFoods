@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_parrot_meat"
+            "items": [
+              "immersivefoods:raw_parrot_meat"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:parrot_meat_smoke"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -50,5 +50,7 @@
   "item.immersivefoods.raw_squid_meat": "Raw Squid",
   "item.immersivefoods.raw_turtle_meat": "Raw Turtle",
   "item.immersivefoods.raw_wolf_meat": "Raw Wolf",
-  "item.immersivefoods.toasted_bee": "Toasted Bee"
+  "item.immersivefoods.toasted_bee": "Toasted Bee",
+  "item.immersivefoods.raw_nautilus": "Raw Nautilus",
+  "item.immersivefoods.cooked_nautilus": "Cooked Nautilus"
 }

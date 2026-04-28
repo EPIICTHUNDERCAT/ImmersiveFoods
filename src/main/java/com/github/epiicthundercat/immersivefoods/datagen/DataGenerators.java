@@ -1,30 +1,21 @@
 package com.github.epiicthundercat.immersivefoods.datagen;
 
-import com.github.epiicthundercat.immersivefoods.Reference;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
-import java.util.concurrent.CompletableFuture;
-import net.minecraft.core.HolderLookup;
-
-@Mod.EventBusSubscriber(modid = Reference.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+// Forge 64 (26.1.2): @Mod.EventBusSubscriber + @SubscribeEvent removed.
+// Registered via GatherDataEvent.getBus(modBusGroup).addListener() in Food constructor.
+//
+// net.minecraftforge.client.model.generators removed and net.minecraft.advancements.critereon
+// restructured in 26.1.2. Recipe and item model JSONs are pre-generated in src/generated/resources.
 public class DataGenerators {
 
-    @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
-
-        generator.addProvider(event.includeClient(), new ModItemModels(packOutput, event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new ModLanguageProvider(packOutput, "en_us"));
         generator.addProvider(event.includeClient(), new ModLanguageProvider(packOutput, "fr_fr"));
-
     }
 }

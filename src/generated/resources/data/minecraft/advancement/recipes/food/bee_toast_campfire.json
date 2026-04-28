@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:dead_bee"
+            "items": [
+              "immersivefoods:dead_bee"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "minecraft:bee_toast_campfire"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

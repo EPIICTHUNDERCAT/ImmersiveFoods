@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "immersivefoods:raw_armadillo_meat"
+            "items": [
+              "immersivefoods:raw_armadillo_meat"
+            ]
           }
         ]
       },
@@ -13,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:armadillo_meat_smelt"
+        "recipe": "minecraft:armadillo_smelt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +28,8 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:armadillo_meat_smelt"
+      "minecraft:armadillo_smelt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -4,10 +4,6 @@
   "cookingtime": 600,
   "experience": 1.0,
   "group": "immersivefoods",
-  "ingredient": {
-    "item": "immersivefoods:raw_wolf_meat"
-  },
-  "result": {
-    "id": "immersivefoods:cooked_wolf_meat"
-  }
+  "ingredient": "immersivefoods:raw_wolf_meat",
+  "result": "immersivefoods:cooked_wolf_meat"
 }
